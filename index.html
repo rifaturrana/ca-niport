@@ -81,6 +81,26 @@
       border-radius: 5px;
     }
 
+    nav .ebook-link {
+      background: linear-gradient(135deg, #ff6b6b, #feca57);
+      animation: glow 1.5s ease-in-out infinite, bounce 2s ease-in-out infinite;
+      font-weight: bold;
+      border-radius: 25px;
+      padding: 10px 25px;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.5);
+    }
+
+    nav .ebook-link:hover {
+      background: linear-gradient(135deg, #ee5a6f, #f9ca24);
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(255, 107, 107, 0.7);
+    }
+
+    nav .ebook-link i {
+      animation: rotate 2s linear infinite;
+      display: inline-block;
+    }
+
     section {
       padding: 70px 20px;
       max-width: 900px;
@@ -160,6 +180,24 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 4px 15px rgba(255, 107, 107, 0.5); }
+      50% { box-shadow: 0 4px 25px rgba(255, 107, 107, 0.9), 0 0 30px rgba(255, 107, 107, 0.6); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-15deg); }
+      50% { transform: rotate(0deg); }
+      75% { transform: rotate(15deg); }
+      100% { transform: rotate(0deg); }
+    }
+
     /* Responsive Design */
     @media (max-width: 600px) {
       header h1 { font-size: 26px; }
@@ -180,12 +218,15 @@
     <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
     <a href="#about"><i class="fa-solid fa-user"></i> About Us</a>
     <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+    <a href="https://aiebook.vercel.app/" target="_blank" class="ebook-link">
+      <i class="fa-solid fa-gift"></i> ফ্রি E-Book পড়ুন
+    </a>
   </nav>
 
   <section id="home">
     <span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>
     <h2>Welcome to Learn Online Computer</h2>
-    <p>We provide easy-to-understand tutorials, guides, and lessons to help you master essential computer skills from the comfort of your home. Whether you're a beginner or want to improve your digital skills, we’ve got you covered.</p>
+    <p>We provide easy-to-understand tutorials, guides, and lessons to help you master essential computer skills from the comfort of your home. Whether you're a beginner or want to improve your digital skills, weâ€™ve got you covered.</p>
   </section>
 
   <section id="about">
@@ -204,7 +245,7 @@
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Feedback</button>
     </form>
-    <p>Cell Phone: 01939383486</p>
+    <p>Cell Phone: 01581509012 | 01939383486</p>
   </section>
 
   <footer>
