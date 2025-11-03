@@ -101,6 +101,69 @@
       display: inline-block;
     }
 
+    nav .ai-tools-link {
+      background: linear-gradient(135deg, #36d1c4, #00c6ff);
+      font-weight: bold;
+      border-radius: 25px;
+      padding: 10px 25px;
+      box-shadow: 0 4px 15px rgba(54, 209, 196, 0.35);
+      margin-left: 10px;
+      position: relative;
+      overflow: hidden;
+      animation: ai-bounce 2.2s ease-in-out infinite, ai-pulse 4s ease-in-out infinite;
+    }
+    nav .ai-tools-link::after {
+      content: '';
+      position: absolute;
+      left: -60%;
+      top: 0;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.35) 30%, rgba(255,255,255,0.18) 60%);
+      filter: blur(1px);
+      animation: shimmer 2.5s linear infinite;
+      pointer-events: none;
+    }
+    nav .ai-tools-link:hover {
+      background: linear-gradient(135deg, #0196b9, #36d1c4);
+      transform: scale(1.11);
+      box-shadow: 0 7px 24px rgba(54, 209, 196, 0.60);
+      z-index: 2;
+    }
+    nav .ai-tools-link i {
+      display: inline-block;
+      margin-right: 4px;
+      animation: rotate-scale 1.8s linear infinite;
+      transition: transform 0.25s;
+    }
+    nav .ai-tools-link:hover i {
+      transform: scale(1.2) rotate(-10deg);
+    }
+    @keyframes shimmer {
+      0% { left: -60%; }
+      50% { left: 80%; }
+      100% { left: 130%; }
+    }
+    @keyframes ai-bounce {
+      0%, 100% { transform: translateY(0); }
+      18% { transform: translateY(-4px); }
+      36% { transform: translateY(0); }
+      70% { transform: translateY(-2px); }
+      80% { transform: translateY(0); }
+    }
+    @keyframes ai-pulse {
+      0%, 100% { filter: brightness(1); }
+      40% { filter: brightness(1.15); }
+      60% { filter: brightness(0.95); }
+    }
+    @keyframes rotate-scale {
+      0% { transform: scale(1) rotate(0deg); }
+      25% { transform: scale(1.15) rotate(-15deg); }
+      50% { transform: scale(1.08) rotate(0deg); }
+      75% { transform: scale(1.14) rotate(15deg); }
+      100% { transform: scale(1) rotate(0deg); }
+    }
+
     section {
       padding: 70px 20px;
       max-width: 900px;
@@ -220,6 +283,9 @@
     <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
     <a href="https://aiebook.vercel.app/" target="_blank" class="ebook-link">
       <i class="fa-solid fa-gift"></i> ফ্রি E-Book পড়ুন
+    </a>
+    <a href="https://aitoolcenter.vercel.app/" target="_blank" class="ai-tools-link">
+      <i class="fa-solid fa-robot"></i> 25 AI Tools Website
     </a>
   </nav>
 
